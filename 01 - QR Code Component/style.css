@@ -24,6 +24,10 @@ body {
   align-items: center;
 }
 
+footer {
+  margin-top: 40px;
+}
+
 /* MOBILE FIRST */
 
 #QR-div {
