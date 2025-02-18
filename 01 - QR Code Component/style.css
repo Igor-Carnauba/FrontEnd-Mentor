@@ -17,6 +17,9 @@ html,
 body {
   background-color: var(--Slate-300);
   font-family: "Outfit", sans-serif;
+}
+
+main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;

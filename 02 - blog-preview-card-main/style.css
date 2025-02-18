@@ -16,17 +16,20 @@
 html,
 body {
   background-color: var(--Yellow);
+  font-family: "Figtree", sans-serif;
+}
+
+main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Figtree";
 }
 
 #Preview-card {
   background-color: var(--White);
-  max-width: 300px;
+  max-width: 290px;
   padding: 20px;
   border: 1px solid black;
   border-radius: 20px;
@@ -34,30 +37,74 @@ body {
 }
 
 #ilustration {
-  max-width: 260px;
+  max-width: 250px;
   display: block;
   margin: auto;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .learn {
   font-weight: 800;
   font-size: 0.7em;
-  padding: 5px 10px;
+  padding: 4px 13px;
   border-radius: 3px;
   display: inline-block;
   background-color: var(--Yellow);
+}
+
+h1 {
+  font-size: 1.1em;
+  font-weight: 800;
+}
+
+h1:hover {
+  color: var(--Yellow);
+  cursor: pointer;
+}
+
+.mainparagraph {
+  color: var(--Gray-500);
+  font-weight: 500;
+}
+
+p {
+  font-size: 0.8em;
+  line-height: 1.5;
+}
+
+.item {
+  margin-bottom: 20px;
 }
 
 #img-greg {
   width: 30px;
 }
 
-#author {
-  display: inline-block;
+.author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-div p {
-  font-size: 0.8em;
-  margin-top: 10px;
+/* Media Query */
+
+@media screen and (min-width: 768px) {
+  #Preview-card {
+    max-width: 325px;
+    transition-duration: 0.5s;
+  }
+
+  #ilustration {
+    max-width: 280px;
+    transition-duration: 0.5s;
+  }
+
+  h1 {
+    font-size: 1.4em;
+  }
+
+  .item {
+    margin-bottom: 15px;
+  }
 }
