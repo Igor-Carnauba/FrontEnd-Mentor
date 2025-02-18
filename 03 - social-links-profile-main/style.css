@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --Green: hsl(75, 94%, 57%);
+  --White: hsl(0, 0%, 100%);
+  --Grey-700: hsl(0, 0%, 20%);
+  --Grey-800: hsl(0, 0%, 12%);
+  --Grey-900: hsl(0, 0%, 8%);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--Grey-900);
+  font-family: "Inter", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.profile {
+  background-color: var(--Grey-800);
+  border-radius: 15px;
+  min-width: 340px;
+  transition: 0.3s;
+}
+
+img {
+  border-radius: 50%;
+  display: block;
+  max-width: 100px;
+  margin: 30px auto 0px;
+}
+
+.author {
+  text-align: center;
+  margin: 30px 0px 25px;
+}
+
+.author > h1 {
+  font-size: 1.7em;
+  color: var(--White);
+  padding-bottom: 10px;
+  font-weight: 400;
+}
+
+.author > p {
+  color: var(--Green);
+  font-weight: 600;
+}
+
+.profile > p {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.695);
+  margin-bottom: 20px;
+}
+
+.links {
+  text-align: center;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.links p {
+  background-color: var(--Grey-700);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px 25px;
+  font-weight: 600;
+}
+
+.links p:hover {
+  background-color: var(--Green);
+  color: var(--Grey-900);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+p {
+  color: var(--White);
+  font-size: 14px;
+}
+
+/* Media Query for desktop */
+
+@media screen and (min-width: 768px) {
+  .profile {
+    min-width: 375px;
+    transition: 0.3s;
+  }
+
+  .links {
+    margin-bottom: 30px;
+    transition: 0.3s;
+  }
+}
