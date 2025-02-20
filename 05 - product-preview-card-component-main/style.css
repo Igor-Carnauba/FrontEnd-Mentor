@@ -39,7 +39,7 @@ main {
 }
 
 .container {
-  max-width: 355px;
+  max-width: 375px;
   background-color: var(--White);
   border-radius: 10px;
 }
@@ -47,7 +47,7 @@ main {
 img {
   display: block;
   margin: auto;
-  max-width: 355px;
+  max-width: 375px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -62,7 +62,7 @@ h1 {
 }
 
 p {
-  color: var(--Green-500);
+  color: var(--Grey);
   font-size: 15px;
   line-height: 1.5;
   font-weight: 500;
@@ -85,6 +85,7 @@ h1 {
 .price-one {
   display: inline-block;
   font-family: "Fraunces", sans-serif;
+  color: var(--Green-500);
 }
 
 .price-one {
@@ -105,7 +106,7 @@ h1 {
 }
 
 button {
-  min-width: 305px;
+  min-width: 325px;
   border-radius: 10px;
   border: none;
   background-color: var(--Green-500);
@@ -124,12 +125,22 @@ button:hover {
 @media screen and (min-width: 768px) {
   .container {
     display: flex;
-    flex-direction: row;
+    flex-flow: row nowrap;
     max-width: 768px;
   }
 
   img {
     border-bottom-left-radius: 10px;
     border-top-right-radius: 0px;
+  }
+
+  p {
+    margin: 18px auto;
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 2.5em;
+    margin: 30px auto;
   }
 }
