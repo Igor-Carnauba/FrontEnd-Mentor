@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* - Family: [Montserrat]
+- Weights: 500, 700
+
+- Family:
+- Weights: 700
+
+- Font size (paragraph): 14px*/
+
+:root {
+  --Green-500: hsl(158, 36%, 37%);
+  --Gren-700: hsl(158, 42%, 18%);
+
+  --Black: hsl(212, 21%, 14%);
+  --Grey: hsl(228, 12%, 48%);
+  --Cream: hsl(30, 38%, 92%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--Cream);
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 355px;
+  background-color: var(--White);
+  border-radius: 10px;
+}
+
+img {
+  display: block;
+  margin: auto;
+  max-width: 355px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.item {
+  margin: 25px;
+}
+
+p,
+h1 {
+  margin-bottom: 15px;
+}
+
+p {
+  color: var(--Green-500);
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+#perfume {
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 5px;
+}
+
+h1 {
+  font-family: "Fraunces", sans-serif;
+  font-size: 2.2em;
+  color: var(--Black);
+  line-height: 1;
+}
+
+.price-two,
+.price-one {
+  display: inline-block;
+  font-family: "Fraunces", sans-serif;
+}
+
+.price-one {
+  font-size: 2.2em;
+  font-weight: 700;
+}
+
+.price-two {
+  margin-left: 10px;
+  vertical-align: middle;
+  text-decoration: line-through;
+  font-size: 0.8em;
+}
+
+#cart {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+button {
+  min-width: 305px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--Green-500);
+  color: var(--White);
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: var(--Gren-700);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    max-width: 768px;
+  }
+
+  img {
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+  }
+}
