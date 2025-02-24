@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap");
+
+:root {
+  /* Primary */
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  /* Neutral */
+  --Very-Dark-Blue-MainBG: hsl(217, 54%, 11%);
+  --Very-Dark-Blue-CardBG: hsl(216, 50%, 16%);
+  --Very-Dark-Blue-Line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+}
+
+/* MOBILE FIRST */
+
+Section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--Very-Dark-Blue-MainBG);
+}
+
+#card-container {
+  width: 328px;
+  height: 544px;
+  border-radius: 15px;
+  background-color: var(--Very-Dark-Blue-CardBG);
+}
+
+#card-container > img {
+  max-width: 285px;
+  display: block;
+  margin: 1.1rem auto;
+  border-radius: 10px;
+}
+
+.center-text {
+  margin: 0px 25px;
+  padding-bottom: 20px;
+}
+
+.center-text h1 {
+  color: var(--white);
+  font-size: 1.05em;
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+
+.center-text h1:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+
+.center-text p {
+  color: var(--Cyan);
+  opacity: 0.6;
+  font-weight: 300;
+}
+
+.price-text {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 25px;
+  align-items: center;
+  border-bottom: 1px solid var(--Very-Dark-Blue-Line);
+  padding-bottom: 25px;
+}
+
+.time,
+.price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--Cyan);
+  opacity: 0.9;
+  font-size: 0.8em;
+}
+
+.price > p {
+  font-weight: 600;
+}
+
+.time > p {
+  font-weight: 300;
+  opacity: 0.7;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 15px 25px 0px 25px;
+  gap: 15px;
+}
+
+.card-footer > img {
+  max-height: 35px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.card-footer p {
+  font-size: 0.8em;
+  color: var(--Soft-blue);
+  opacity: 0.8;
+}
+
+.card-footer span {
+  color: var(--white);
+}
+
+.card-footer span:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+
+/* MEDIA QUERY  */
+
+@media screen and (min-width: 768px) {
+  #card-container {
+    width: 350px;
+    height: 594px;
+  }
+
+  #card-container > img {
+    max-width: 300px;
+    display: block;
+    margin: 22px auto;
+    border-radius: 10px;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 30px 25px;
+    gap: 15px;
+  }
+}
