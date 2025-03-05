@@ -1,0 +1,173 @@
+/* ## Colors
+
+### Primary
+
+Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%)
+
+### Neutral
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+
+- Family: [Big Shoulders Display](https://fonts.google.com/specimen/Big+Shoulders+Display)
+- Weights: 700 */
+
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lexend+Deca:wght@100..900&display=swap");
+
+:root {
+  --Bright-Orange: hsl(31, 77%, 52%);
+  --Dark-Cyan: hsl(184, 100%, 22%);
+  --Very-Dark-Cyan: hsl(179, 100%, 13%);
+
+  --Trans-White: hsla(0, 0%, 100%, 0.75);
+  --Very-Light-Gray: hsl(0, 0%, 95%);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--Trans-White);
+}
+
+h2 {
+  font-family: "Big Shoulders", sans-serif;
+  text-transform: uppercase;
+  color: var(--Very-Light-Gray);
+  font-size: 2em;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--Very-Light-Gray);
+}
+
+#main-container {
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.cars-cards {
+  padding: 45px;
+  height: 442px;
+}
+
+.item {
+  margin-bottom: 25px;
+}
+
+#Sedans {
+  background-color: var(--Bright-Orange);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#SUVs {
+  background-color: var(--Dark-Cyan);
+}
+
+#Luxury {
+  background-color: var(--Very-Dark-Cyan);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.btn {
+  background-color: var(--Very-Light-Gray);
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  margin-top: 15px;
+}
+
+#Sedans > button {
+  color: var(--Bright-Orange);
+}
+
+#Sedans > button:hover {
+  color: white;
+}
+
+#SUVs > button {
+  color: var(--Dark-Cyan);
+}
+
+#SUVs > button:hover {
+  color: white;
+}
+
+#Luxury > button {
+  color: var(--Very-Dark-Cyan);
+}
+
+#Luxury > button:hover {
+  color: white;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+/* MEDIA QUERY  */
+
+@media screen and (min-width: 768px) {
+  #main-container {
+    width: 920px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .btn {
+    margin-top: 40px;
+    padding: 15px 35px;
+  }
+
+  #Sedans {
+    background-color: var(--Bright-Orange);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+  }
+
+  #Luxury {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+}
